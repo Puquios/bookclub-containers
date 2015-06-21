@@ -11,7 +11,7 @@
                   httpPort="9080"
                   httpsPort="9443" />
 
-    <application context-root="bookclub" type="war" id="bookclub"
+    <application context-root="" type="war" id="bookclub"
         location="bookclub.war" name="bookclub"/>
 
 </server>
