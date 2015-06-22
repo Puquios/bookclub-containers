@@ -18,9 +18,6 @@ MAINTAINER Robbie Minshall "rjminsha@us.ibm.com"
 
 ENV WEB_PORT 80
 EXPOSE  80
-    
-COPY config/id_rsa.pub /root/.ssh/
-RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 # set this server as the default server for the liberty image
 ADD config/server.xml /opt/ibm/wlp/usr/servers/defaultServer/server.xml
