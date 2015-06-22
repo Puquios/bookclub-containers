@@ -80,6 +80,9 @@ stages:
   - name: BIND_TO
     value: pipeline_bridge_app
     type: text
+  - name: ROUTE_HOSTNAME
+    value: ${CF_APP}
+    type: text
   - name: NY_TIMES_API_KEY
     value: 40c11f9c846004aff534eaf95526988c:11:72351455
     type: text
