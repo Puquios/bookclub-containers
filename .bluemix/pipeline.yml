@@ -74,8 +74,6 @@ stages:
   - type: job
     stage: Dockerize
     job: Container build
-  triggers:
-  - type: stage
   properties:
   - name: BIND_TO
     value: pipeline_bridge_app
@@ -153,3 +151,4 @@ stages:
       \ green, red, label_color, no_color.\nif [ $RESULT -ne 0 ]; then\n    echo -e\
       \ \"${red}Executed failed or had warnings ${no_color}\"\n    ${EXT_DIR}/print_help.sh\n\
       \    exit $RESULT\nfi\necho -e \"${green}Execution complete${no_label}\""
+
