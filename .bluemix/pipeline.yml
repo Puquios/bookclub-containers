@@ -15,9 +15,9 @@ stages:
     type: builder
     extension_id: ibm.devops.services.pipeline.globalization.builder
     target:
-      url: https://api.ng.bluemix.net
-      organization: rjminsha@us.ibm.com
-      space: dev
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
     SETUP_SERVICE_SPACE: 'true'
     INPUT_PATTERN: translation_en.properties
 - name: Dockerize
@@ -32,9 +32,9 @@ stages:
     type: builder
     extension_id: ibm.devops.services.pipeline.container.builder
     target:
-      url: https://api.ng.bluemix.net
-      organization: rjminsha@us.ibm.com
-      space: dev
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
     IMAGE_NAME: bookclub
     USE_CACHED_LAYERS: 'true'
     COMMAND: "#!/bin/bash\n# The following colors have been defined to help with presentation\
@@ -94,9 +94,9 @@ stages:
     type: deployer
     extension_id: ibm.devops.services.pipeline.docker.deploy.ice
     target:
-      url: https://api.ng.bluemix.net
-      organization: rjminsha@us.ibm.com
-      space: dev
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
     PORT: '80'
     OPTIONAL_ARGS: --env NY_TIMES_API_KEY=${NY_TIMES_API_KEY} --env DREAM_BOOKS_API_KEY=${DREAM_BOOKS_API_KEY} --env ALCHEMY_API_KEY=${ALCHEMY_API_KEY}
     DEPLOY_TYPE: red_black
