@@ -35,7 +35,7 @@ stages:
       url: ${CF_TARGET_URL}
       organization: ${CF_ORGANIZATION}
       space: ${CF_SPACE}
-    IMAGE_NAME: bookclub
+    IMAGE_NAME: ${CF_APP}
     USE_CACHED_LAYERS: 'true'
     COMMAND: "#!/bin/bash\n# The following colors have been defined to help with presentation\
       \ of logs: green, red, label_color, no_color.  \necho -e \"${label_color}Starting\
@@ -100,7 +100,7 @@ stages:
     PORT: '80'
     OPTIONAL_ARGS: --env NY_TIMES_API_KEY=${NY_TIMES_API_KEY} --env DREAM_BOOKS_API_KEY=${DREAM_BOOKS_API_KEY} --env ALCHEMY_API_KEY=${ALCHEMY_API_KEY}
     DEPLOY_TYPE: red_black
-    CONTAINER_NAME: bookclub
+    CONTAINER_NAME: ${CF_APP}
     COMMAND: "#!/bin/bash\n# The following are some example deployment scripts.  Use\
       \ these as is or fork them and include your updates here:\necho -e \"${label_color}Starting\
       \ deployment script${no_color}\"\n\necho -e \"setting up services\" \npython\
