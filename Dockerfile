@@ -12,8 +12,10 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-FROM registry-ice.ng.bluemix.net/ibmliberty
-
+# GoLive Container service will move registry from beta (registry-ice) to production (registry) container registries
+# FROM registry-ice.ng.bluemix.net/ibmliberty
+# FROM registry.ng.bluemix.net/ibmliberty
+FROM ibmliberty
 MAINTAINER Robbie Minshall "rjminsha@us.ibm.com"
 
 ENV WEB_PORT 80
