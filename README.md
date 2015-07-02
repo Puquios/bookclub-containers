@@ -6,6 +6,8 @@ Before you start get API keys for external services.  You will update the secure
 * http://idreambooks.com/api
 * http://www.alchemyapi.com
 
+Bluemix Containers have gone live!  Before you start with this example you need to setup a namespace.  The namespace is set for each organization and will be used for your image repositories names in your organizations private Container Registry.  To setup a namespace, simply login to [https://bluemix.net](Bluemix), and click ![Start Containers][start-containers.jpg].  If you have not setup a namespace you will be asked to.  Even if you were a beta participant you will need to create a new namespace.  
+
 Click this (clones project, creates DevOps Services Project, generates multi-stage pipeline, deploys application to IBM Bluemix):
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/Puquios/bookclub-containers.git)
